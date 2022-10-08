@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    background-image: url('../img/wallpaper-g.png');
+    background-repeat: no-repeat;
+	background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+.dialog-one-div {
+    width: 30%;
+    min-width: 285px;
+    opacity: 0;
+    position: relative;
+    -webkit-animation: move_dialog_one 3s 1 ;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 1s;
+            animation: move_dialog_one 3s 1 ;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+}
+
+.dialog-two-div {
+    width: 30%;
+    min-width: 285px;
+    opacity: 0;
+    position: relative;
+    -webkit-animation: move_dialog_two 3s 1 ;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+            animation: move_dialog_two 3s 1 ;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+}
+
+.verify-icon, .dialog-one, .dialog-two {
+    width: 100%;
+}
+
+.verify-div {
+    text-align: center;
+    width: 10%;
+    min-width: 100px;
+    padding-top:10% ;
+    position: relative;
+    opacity: 0;
+    left: 45%;
+    -webkit-animation: move_icon 2s 1 ;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 6s;
+            animation: move_icon 2s 1 ;
+            animation-fill-mode: forwards;
+            animation-delay: 6s;
+}
+
+@keyframes move_icon {
+    from {top: 90%; opacity: 0;}
+    to {top: 50%; opacity: 1;}
+}
+
+@-webkit-keyframes move_icon { 
+    from {top: 90%; opacity: 0;}
+    to {top: 50%; opacity: 1;}
+}
+
+@keyframes move_dialog_one {
+    from {left: 10%; opacity: 0;}
+    to {left: 20%; opacity: 1;}
+}
+
+@-webkit-keyframes move_dialog_one { 
+    from {left: 10%; opacity: 0;}
+    to {left: 20%; opacity: 1;}
+}
+
+@keyframes move_dialog_two { 
+    from {left: 60%; opacity: 0;}
+    to {left: 50%; opacity: 1;}
+}
+
+@-webkit-keyframes move_dialog_two { 
+    from {left: 60%; opacity: 0;}
+    to {left: 50%; opacity: 1;}
+}
+
+@media (max-width: 600px){ /*small screen*/
+    
+    body {
+        background-image: url('../img/wallpaper-p.png');
+    }
+
+    .dialog-one-div, .dialog-two-div {
+        min-width: 200px;
+    }
+
+    .verify-div {
+        min-width: 50px;
+    }
+}

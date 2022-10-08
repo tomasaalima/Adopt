@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+:root {
+    --base:  rgb(218, 49, 49);
+    --white: #FFF;
+}
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    font-size: 100%;
+    min-width:500px;
+    width: auto !important;  
+    width:100%;
+}
+
+.header-junction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--base);
+}
+
+.header-adopt-logo {
+    width: 100px;
+    padding-left: 20px;
+}
+
+.header-nav-one {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.void {
+    width: 100px;
+}
+
+.actual {
+    color: var(--white);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    position: fixed; 
+    bottom:0; left:0;
+    width: 100%; height: 5%;
+}
+
+footer > p {
+    color: var(--white);
+    margin: auto;
+    font-size: 0.8em;
+}
+
+@media (max-width:640px){ /*Small Screen*/
+
+    .header-junction {
+        justify-content: start;
+        gap: 10%;
+    }
+
+    .header-adopt-logo {
+        width: 90px;
+    }
+
+    .void {
+        display: none;
+    }
+
+    .header-nav-one > a {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px){ /*Iphone 6 screen*/
+
+    body {
+        min-width:375px;
+    }
+
+    .header-junction {
+        justify-content: start;
+        gap: 10%;
+    }
+
+    .header-adopt-logo {
+        width: 60px;
+    }
+
+    .void {
+        display: none;
+    }
+
+    .header-nav-one > a {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 375px){ /*Iphone 5 screen*/
+
+    body {
+        min-width:320px;
+    }
+
+    .header-junction {
+        justify-content: start;
+        gap: 10%;
+    }
+
+    .header-adopt-logo {
+        width: 60px;
+    }
+
+    .void {
+        display: none;
+    }
+
+    .header-nav-one > a {
+        font-size: 0.5em;
+    }
+}

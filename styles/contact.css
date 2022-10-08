@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5% 10% 10% 50px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.first-content {
+    gap: 40px;
+    max-width: 640px;
+    min-width: 300px;
+}
+
+.first-content > div > * {
+    width: 80%;
+}
+
+.first-content > div {
+    text-align: justify;
+    width: 100%;
+}
+
+.second-content {
+    max-width: 640px;
+    min-width: 300px;
+    gap: 15px;
+}
+
+.second-content > img {
+    width: 100%;
+}
+
+.first-content-title, .second-content > .name {
+    font: normal 2em bold Arial, serif;
+}
+
+.paragraphs {
+    text-align: justify;
+    font: normal 1.2em normal serif;
+}
+
+@media (max-width: 700px){ /*small screen*/
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .first-content-title, .second-content > .name {
+        font: normal 1.5em bolder Arial, serif;
+    }
+
+    .paragraphs {
+        text-align: justify;
+        font: normal 0.8em normal serif;
+    }
+
+    .first-content > div > * {
+        width: 100%;
+    }
+
+    .first-content , .second-content {
+        min-width: 320px;
+    }
+}
+
+@media (max-width: 410px){ /*Iphone screen*/
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .first-content-title, .second-content > .name {
+        font: normal 1em bolder Arial, serif;
+    }
+
+    .paragraphs {
+        text-align: justify;
+        font: normal 0.6em normal serif;
+    }
+
+    .first-content > div > * {
+        width: 100%;
+    }
+
+    .first-content , .second-content {
+        min-width: 200px;
+    }
+}
