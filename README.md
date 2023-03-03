@@ -1,2 +1,2 @@
 # adopt
-animal adoption site for validation of learning
+Animal adoption site for validation of learning
